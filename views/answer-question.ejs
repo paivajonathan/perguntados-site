@@ -1,0 +1,34 @@
+<%- include("./partials/header.ejs"); %>
+
+<link rel="stylesheet" type="text/css" href="/css/answer-question.css" />
+<body>
+    <%- include("./partials/navbar.ejs"); %>
+    <div id="div-question">
+        <h1><%= question.title %></h1>
+        <p><%= question.description %></p>
+    </div>
+    <form action="/save-answer" method="post">
+        <div id="div-form">
+            <textarea name="body" placeholder="Responda a esta pergunta..." maxlength="500" required></textarea>
+            <input type="hidden" name="questionId" value="<%= question.id %>" />
+            <div id="div-button-container">
+                <button type="reset" id="btn-reset">Limpar</button>
+                <button type="submit" id="btn-submit">Responder</button>
+            </div>
+        </div>
+    </form>
+    <% if (answers[0]) { %>
+        <hr />
+        <h2>Respostas anteriores</h2>
+        
+        <div id="div-answer-container">
+            <% answers.forEach((answer) => { %>
+                <div class="div-answer">
+                    <%= answer.body %>
+                </div>
+            <% }); %>
+        </div>
+    <% } %>
+</body>
+
+<%- include("./partials/footer.ejs"); %>

@@ -1,0 +1,24 @@
+.navbar {
+    height: 12.5vh;
+    
+    padding: 0 2.5rem;
+    margin-bottom: 2.5rem;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #333;
+    color: white;
+    
+    font-size: 20px;
+}
+
+.navbar a {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+
+    color: white;
+    
+    text-decoration: none;
+}

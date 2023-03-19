@@ -1,0 +1,116 @@
+body {
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #333;
+}
+
+.div-form {
+    height: 75vh;
+    width: 75vw;
+
+    border: 1px solid black;
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+    background-color: white;
+
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+.div-input-group {
+    margin: 0 5rem;
+}
+
+input, textarea {
+    width: 100%;
+    
+    margin: 1rem 0;
+    border-radius: 5px;
+    padding: .5rem;
+    
+    display: block;
+    
+    box-shadow: 0 0 2.5px black;
+
+    font-size: 15px;
+
+    transition: box-shadow 100ms;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 7px black;
+}
+
+textarea {
+    min-height: 10rem;
+    max-height: 10rem;
+    resize: none;
+}
+
+#div-button-container {
+    margin-top: 2.5rem;
+
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+button {
+    width: 200px;
+
+    border-radius: 10px;
+    box-shadow: 0 0 2.5px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: bolder;
+
+    transition: box-shadow 200ms, transform 200ms;
+
+    cursor: pointer;
+}
+
+button:focus, button:hover {
+    outline: none;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+button:active {
+    transform: translateY(5px);
+    box-shadow: 0 0 2.5px rgba(0, 0, 0, 0.5);
+}
+
+#btn-reset {
+    background-color: var(--background-red);
+}
+
+#btn-submit {
+    background-color: var(--background-dark-gray);
+}
+
+@media only screen and (max-width: 900px) {
+    .div-input-group {
+        margin: 0 3rem;
+    }
+
+    #div-button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

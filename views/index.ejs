@@ -1,0 +1,20 @@
+<%- include("./partials/header.ejs"); %>
+<link rel="stylesheet" type="text/css" href="/css/index.css" />
+<body>
+    <%- include("./partials/navbar.ejs"); %>
+    <fieldset>
+        <legend>
+            <h1>Perguntados</h1>
+        </legend>
+    </fieldset>
+    <a href="/make-question" id="a-make-question">Faça a sua pergunta</a>
+    <% questions.forEach((question) => {%>
+        <div class="div-question">
+            <h2><%= question.title %></h2>
+            <hr />
+            <a href="/answer-question/<%= question.id %>">Responder</a>
+        </div>
+    <% }); %>
+</body>
+
+<%- include("./partials/footer.ejs") %>
