@@ -87,4 +87,4 @@ app.listen(3000, (error) => {
     } else {
         console.log("The server started successfully");
     }
-})
+});
